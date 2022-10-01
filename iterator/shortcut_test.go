@@ -7,21 +7,17 @@ import (
 )
 
 func TestFilter(t *testing.T) {
-	t.Run("normal filter", func(tt *testing.T) {
-		result := Filter([]int{1, 2, 3, 4, 5}, func(x int) bool { return x%2 == 1 })
+	result := Filter([]int{1, 2, 3, 4, 5}, func(x int) bool { return x%2 == 1 })
 
-		assert.Equal(tt, 3, len(result))
-		assert.Equal(tt, []int{1, 3, 5}, result)
-	})
+	assert.Equal(t, 3, len(result))
+	assert.Equal(t, []int{1, 3, 5}, result)
 }
 
 func TestMap(t *testing.T) {
-	t.Run("normal map", func(tt *testing.T) {
-		result := Map([]string{"abc", "defg", "hijkl"}, func(x string) int { return len(x) })
+	result := Map([]string{"abc", "defg", "hijkl"}, func(x string) int { return len(x) })
 
-		assert.Equal(tt, 3, len(result))
-		assert.Equal(tt, []int{3, 4, 5}, result)
-	})
+	assert.Equal(t, 3, len(result))
+	assert.Equal(t, []int{3, 4, 5}, result)
 }
 
 func TestReduce(t *testing.T) {
