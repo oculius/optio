@@ -98,7 +98,7 @@ func Min[T constraints.Ordered](arr ...[]T) T {
 	return min
 }
 
-func Find[T any](arr []T, pred fn.Predicate[T]) (idx int, found bool) {
+func Find[T any](arr []T, pred fn.SilentPredicate[T]) (idx int, found bool) {
 	idx = -1
 	for i, val := range arr {
 		if pred(val) {
@@ -110,7 +110,7 @@ func Find[T any](arr []T, pred fn.Predicate[T]) (idx int, found bool) {
 	return
 }
 
-func FindAndCut[T any](arr []T, pred fn.Predicate[T]) (idx int, result []T, found bool) {
+func FindAndCut[T any](arr []T, pred fn.SilentPredicate[T]) (idx int, result []T, found bool) {
 	found = false
 	idx = -1
 	for i, val := range arr {
