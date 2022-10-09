@@ -1,4 +1,4 @@
-module optio
+module github.com/oculius/optio
 
 go 1.19
 
