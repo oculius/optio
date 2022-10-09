@@ -1,8 +1,8 @@
 package array
 
 import (
+	"github.com/oculius/optio/fn"
 	"golang.org/x/exp/constraints"
-	"optio/fn"
 )
 
 func Fill[T any](arr []T, value T) {
